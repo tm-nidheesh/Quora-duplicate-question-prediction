@@ -1,0 +1,31 @@
+<!DOCTYPE html5>
+<html>
+    <style>
+        h1 {text-align: center;}
+    </style> 
+ <head>
+   <title>Quora</title> 
+ </head> 
+ <body style="background-color: steelblue;">
+    
+    <h1>QUORA Duplicate Question detection</h1>
+    
+    <form action="{{ url_for('predict')}}" method="POST">
+        <label for="question1"><b>Question 1</b>:</label>
+        <textarea type="text" id="question1" name="question1"></textarea><br><br>
+        <label for="question2"><b>Question 2</b>:</label>
+        <textarea type="text" id="question2" name="question2"></textarea><br><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        
+    </form>
+    <br>
+    <br>
+    
+    <p> {{ result }} </p>
+    
+    
+    <br>
+    
+    
+ </body>  
+</html>
